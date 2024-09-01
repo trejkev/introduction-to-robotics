@@ -100,18 +100,18 @@ TX_displacement = 2.2361
 This is equivalent to computing the norm of the translation in the rotation matrix, which corresponds to the third column of the matrix. Since the example is in two dimensions, we only need the values for the x\-axis and y\-axis, corresponding to the first two rows. This is done as shown below:
 
 ```matlab
-TX_traslation = TX(1:2, 3)
+TX_translation = TX(1:2, 3)
 ```
 
 ```matlabTextOutput
-TX_traslation = 2x1    
+TX_translation = 2x1    
      1
      2
 
 ```
 
 ```matlab
-TX_displacement = norm(TX_traslation)
+TX_displacement = norm(TX_translation)
 ```
 
 ```matlabTextOutput
@@ -121,18 +121,18 @@ TX_displacement = 2.2361
 For the reference frame {RX}, we can perform the same procedure:
 
 ```matlab
-TRX_traslation = TRX(1:2, 3)
+TRX_translation = TRX(1:2, 3)
 ```
 
 ```matlabTextOutput
-TRX_traslation = 2x1    
+TRX_translation = 2x1    
    -2.1213
    -0.7071
 
 ```
 
 ```matlab
-TRX_displacement = norm(TRX_traslation)
+TRX_displacement = norm(TRX_translation)
 ```
 
 ```matlabTextOutput
@@ -158,18 +158,18 @@ Answer:
 In this case, since matrix operations are performed from right to left, the reference frame first rotates by 135° referenced to the origin (not translation, since it is at zero distance from the origin), and then translates by one unit along the x\-axis and two units along the y\-axis referenced to the origin. This positions it in alignment with the frame {X}, but rotated by 135° relative to it. Thus, its norm will also match that of the other reference frames, as shown below:
 
 ```matlab
-TXR_traslation = TXR(1:2, 3)
+TXR_translation = TXR(1:2, 3)
 ```
 
 ```matlabTextOutput
-TXR_traslation = 2x1    
+TXR_translation = 2x1    
      1
      2
 
 ```
 
 ```matlab
-TXR_displacement = norm(TXR_traslation)
+TXR_displacement = norm(TXR_translation)
 ```
 
 ```matlabTextOutput
