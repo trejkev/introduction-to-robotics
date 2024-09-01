@@ -26,10 +26,6 @@
 
 **Cycle: II\-2024**
 
-<a name="beginToc"></a>
-
-## Table of Contents
-<a name="endToc"></a>
 
 # Homework 01
 
