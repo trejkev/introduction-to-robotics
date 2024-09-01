@@ -146,7 +146,7 @@ In this way, as can be seen, since both underwent the same translation, the resu
 Execute the following line of code and expand your answer from step 4 to explain what happens when plotting {XR}.
 
 ```matlab
-TXR = TX*TR;                           % Rotate and then traslate
+TXR = TX*TR;                           % Rotate and then translate
 plottform2d(TXR,frame="XR",color="g");
 ```
 
