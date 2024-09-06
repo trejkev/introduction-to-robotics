@@ -26,10 +26,6 @@
 
 **Cycle: II\-2024**
 
-<a name="beginToc"></a>
-
-## Table of Contents
-<a name="endToc"></a>
 
 # Homework 01
 
@@ -214,7 +210,7 @@ XC = trvec2tform(XC)                   % Create a 2D transformation matrix at XC
 
 ```matlabTextOutput
 XC = 3x3    
-1.0000         0   -0.5000
+    1.0000         0   -0.5000
          0    1.0000   -2.0000
          0         0    1.0000
 
