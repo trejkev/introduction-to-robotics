@@ -194,7 +194,7 @@ while true
         A4 = A3*A4; % Compute A4 based on A3
         plottform(A4, handle = h4);
 
-        % Update vector from A3 to A4
+        %% Update vector from A3 to A4
         %-----------------------------
         % Updating origin
         hv4.XData = A3(1, 4);
@@ -216,7 +216,7 @@ while true
         A5 = A4*A5; % Compute A5 based on A4
         plottform(A5, handle = h5);
 
-        % Update vector from A4 to A5
+        %% Update vector from A4 to A5
         %-----------------------------
         % Updating origin
         hv5.XData = A4(1, 4);
@@ -238,7 +238,7 @@ while true
         A6 = A5*A6; % Compute A6 based on A5
         plottform(A6, handle = h6);
 
-        % Update vector from A5 to A6
+        %% Update vector from A5 to A6
         %-----------------------------
         % Updating origin
         hv6.XData = A5(1, 4);
