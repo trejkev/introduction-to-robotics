@@ -58,17 +58,17 @@ Example of how the first three joints of the simulated robot should appear in MA
 
 # Globals
 ```matlab
-pause_time = 0.05;
-offset     = 6;
-axes       = [-30 30 -30 30 0 30];
-A1b        = [-170 170];
-A2b        = [-90 150];
-A3b        = [-100 80];
-A4b        = [-155 155];
-A5b        = [-135 135];
-A6b        = [-200 200];
-A4toA3rot  = 90;
-genGif     = false;
+pause_time = 0.05;                 % Time between animations
+offset     = 6;                    % Offset between joints
+axes       = [-30 30 -30 30 0 30]; % Axes for the figure
+A1b        = [-170 170];           % Rotation bounds for A1 joint
+A2b        = [-90 150];            % Rotation bounds for A2 joint
+A3b        = [-100 80];            % Rotation bounds for A3 joint
+A4b        = [-155 155];           % Rotation bounds for A4 joint
+A5b        = [-135 135];           % Rotation bounds for A5 joint
+A6b        = [-200 200];           % Rotation bounds for A6 joint
+A4toA3rot  = 90;                   % Angle between A3 and A4
+genGif     = false;                % Set to true to generate animation gif
 
 ```
 # Create an initial plot for each of the reference frames
@@ -130,7 +130,7 @@ while true
     for angle = 0:360
 
         %% A1 update
-        %-------------
+        %--------------
         angle1 = angle + A1b(1);
         if (angle1 > A1b(1)) && (angle1 < A1b(2))
             A1 = tformrz(angle1*pi/180);
@@ -152,17 +152,17 @@ while true
 
         %% Update vector from A1 to A2
         %-----------------------------
-        % Updating origin
+        % Update origin
         hv2.XData = A1(1, 4);
         hv2.YData = A1(2, 4);
         hv2.ZData = A1(3, 4);
-        % Updating magnitude
+        % Update magnitude
         hv2.UData = A2(1, 4) - A1(1, 4);
         hv2.VData = A2(2, 4) - A1(2, 4);
         hv2.WData = A2(3, 4) - A1(3, 4);
 
         %% A3 update
-        %-------------
+        %--------------
         angle3 = angle + A3b(1);
         if (angle3 > A3b(1)) && (angle3 < A3b(2))
             A3 = trvec2tform([0 0 offset])*tformry(angle3*pi/180);
@@ -174,7 +174,7 @@ while true
 
         %% Update vector from A2 to A3
         %-----------------------------
-        % Updating origin
+        % Update origin
         hv3.XData = A2(1, 4);
         hv3.YData = A2(2, 4);
         hv3.ZData = A2(3, 4);
@@ -184,7 +184,7 @@ while true
         hv3.WData = A3(3, 4) - A2(3, 4);
 
         %% A4 update
-        %-------------
+        %--------------
         angle4 = angle + A4b(1);
         if (angle4 > A4b(1)) && (angle4 < A4b(2))
             A4 = trvec2tform([offset 0 0])*tformry(A4toA3rot*pi/180)*tformrz(angle4*pi/180);
@@ -196,17 +196,17 @@ while true
 
         %% Update vector from A3 to A4
         %-----------------------------
-        % Updating origin
+        % Update origin
         hv4.XData = A3(1, 4);
         hv4.YData = A3(2, 4);
         hv4.ZData = A3(3, 4);
-        % Updating magnitude
+        % Update magnitude
         hv4.UData = A4(1, 4) - A3(1, 4);
         hv4.VData = A4(2, 4) - A3(2, 4);
         hv4.WData = A4(3, 4) - A3(3, 4);
 
         %% A5 update
-        %-------------
+        %--------------
         angle5 = angle + A5b(1);
         if (angle5 > A5b(1)) && (angle5 < A5b(2))
             A5 = trvec2tform([0 0 offset])*tformrx(angle5*pi/180);
@@ -218,17 +218,17 @@ while true
 
         %% Update vector from A4 to A5
         %-----------------------------
-        % Updating origin
+        % Update origin
         hv5.XData = A4(1, 4);
         hv5.YData = A4(2, 4);
         hv5.ZData = A4(3, 4);
-        % Updating magnitude
+        % Update magnitude
         hv5.UData = A5(1, 4) - A4(1, 4);
         hv5.VData = A5(2, 4) - A4(2, 4);
         hv5.WData = A5(3, 4) - A4(3, 4);
 
         %% A6 update
-        %-------------
+        %--------------
         angle6 = angle + A6b(1);
         if (angle6 > A6b(1)) && (angle6 < A6b(2))
             A6 = trvec2tform([0 0 offset])*tformrx(angle6*pi/180);
@@ -240,11 +240,11 @@ while true
 
         %% Update vector from A5 to A6
         %-----------------------------
-        % Updating origin
+        % Update origin
         hv6.XData = A5(1, 4);
         hv6.YData = A5(2, 4);
         hv6.ZData = A5(3, 4);
-        % Updating magnitude
+        % Update magnitude
         hv6.UData = A6(1, 4) - A5(1, 4);
         hv6.VData = A6(2, 4) - A5(2, 4);
         hv6.WData = A6(3, 4) - A5(3, 4);
