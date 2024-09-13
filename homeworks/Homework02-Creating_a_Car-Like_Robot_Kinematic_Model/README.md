@@ -1,5 +1,5 @@
 
-# Implementing the Kinematic Model of a Car\-Like Vehicle in MATLAB
+# Implementing the Kinematic Model of a Car\-Like Robot in MATLAB
 
 The mobile robot model in a car\-like fashion can be described by its x and y velocities, and its angular velocity (aka heading rate), all of them with respect to the frame {0}. The mathematics behind it are shown below.
 
