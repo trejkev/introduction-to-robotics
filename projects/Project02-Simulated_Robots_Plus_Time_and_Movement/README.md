@@ -1,16 +1,4 @@
-
-# Universidad de Costa Rica
-# Engineering Faculty
-# School of Computer Science and Informatics
-# Postgraduate in Computer Science and Informatics
-# Introduction to Robotics
-# Project 01
-# Student: Kevin Trejos Vargas
-# ID: B26708
-# Cycle: II\-2024
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
+## Description
 
 This lab project for the Introduction to Robotics course aims to apply knowledge related to the topics of "Time and Motion" and "Mobile Robots."
 
