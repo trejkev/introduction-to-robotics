@@ -1,37 +1,8 @@
-
-
-**Universidad de Costa Rica**
-
-
-**Engineering Faculty**
-
-
-**School of Computer Science and Informatics**
-
-
-**Postgraduate in Computer Science and Informatics**
-
-
-**Introduction to Robotics**
-
-
-**Project 01**
-
-
-**Student: Kevin Trejos Vargas**
-
-
-**ID: B26708**
-
-
-**Cycle: II\-2024**
-
+## Description
 
 This laboratory project for the Introduction to Robotics course aims to apply knowledge related to the topic "Representation of Position and Orientation" in the case of three dimensions.
 
-
 Below is part of the data sheet information for the IRB 1520ID robotic arc welder system.
-
 
 This documentation provides information on the 6 degrees of freedom of the robot and specifies the rotational angle limits for each axis following the ZYZ convention.
 
