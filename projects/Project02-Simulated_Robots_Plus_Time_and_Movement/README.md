@@ -12,28 +12,6 @@ The lab project is divided into two parts. The first part involves designing a m
 ```matlab
 close all
 clf;
-```
-
-```matlabTextOutput
-Error using load
-Unable to find file or directory '.\Maze01.fig'.
-
-Error in matlab.graphics.internal.figfile.FigFile/read (line 31)
-hgDataVars = load(filename, '-mat', '-regexp', '^hg[M]');
-
-Error in matlab.graphics.internal.figfile.FigFile
-
-Error in loadFigure (line 31)
-FF = matlab.graphics.internal.figfile.FigFile(fullpath);
-
-Error in openfig>localOpenFigure (line 75)
-    h = loadFigure(filename, visibleAction);
-
-Error in openfig (line 40)
-figOut = localOpenFigure(filename, reuse, visibleAction);
-```
-
-```matlab
 openfig(fullfile(pwd, 'Lab2/Maze01.fig'));
 hold on
 ```
