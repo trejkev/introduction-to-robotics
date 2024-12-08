@@ -1,13 +1,6 @@
 
-# Universidad de Costa Rica
-# Facultad de Ingeniería
-# Escuela de Ciencias de la Computación e Informática
-# Posgrado en Computación e Informática
-# Introducción a la Robótica
-## Tarea 6: Proyección en Realidad Aumentada de una Figura Utilizando AprilTags
-## Estudiante: Kevin Trejos Vargas
-## Carné: B26708
-## Ciclo: II\-2024
+The following MATLAB code takes an image taken with an specific camera which we hold the intrinsics of it, and projects a set of prisms on it where the algorithm detected the placement of an AprilTag.
+
 ```matlab
 scene = imread("aprilTag36h11.jpg");
 imshow(scene);
@@ -46,11 +39,11 @@ depthScalingFactor = -1.5;  % Increase this to make top face "move" away from th
 topFace(:, 3) = topFace(:, 3) * depthScalingFactor;
 
 % Combine bottom and top face vertices into a single matrix
-trapezoidVertices = [bottomFace; topFace]
+prismVertices = [bottomFace; topFace]
 ```
 
 ```matlabTextOutput
-trapezoidVertices = 8x3    
+prismVertices = 8x3    
     0.0200   -0.0200         0
     0.0200    0.0200         0
    -0.0200    0.0200         0
@@ -70,12 +63,12 @@ augmentedImage = scene;
 % Loop through all detected poses of the AprilTags
 for i = 1:length(pose)
     % Project the 3D vertices into 2D image coordinates
-    imagePoints = world2img(trapezoidVertices, pose(i), intrinsics);
+    imagePoints = world2img(prismVertices, pose(i), intrinsics);
     
     % Extract the 2D x and y coordinates from the projection
     projected2D = imagePoints(:, 1:2);
     
-    % Insert the projected trapezoidal cuboid into the image
+    % Insert the projected prism into the image
     augmentedImage = insertShape(augmentedImage, "projected-cuboid", projected2D, ...
         ShapeColor="green", LineWidth=6);
 end
