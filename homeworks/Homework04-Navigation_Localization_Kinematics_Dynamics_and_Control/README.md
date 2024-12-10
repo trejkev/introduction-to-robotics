@@ -21,9 +21,9 @@ figure; floorMap.show
 
 *Subsequently, to find the indicated paths, the following code is used. It should be noted that the paths being sought are:*
 
-1.  *Garden a Garage.*
-2. *br3 a Driveway.*
-3. *br1 a Kitchen.*
+1.  *Garden to Garage.*
+2. *br3 to Driveway.*
+3. *br1 to Kitchen.*
 ```matlab
 rng(10) % obtain repeatable results
 prm = mobileRobotPRM(floorMap)
