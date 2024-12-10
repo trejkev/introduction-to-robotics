@@ -1,34 +1,3 @@
-
-
-**Universidad de Costa Rica**
-
-
-**Engineering Faculty**
-
-
-**School of Computer Science and Informatics**
-
-
-**Postgraduate in Computer Science and Informatics**
-
-
-**Introduction to Robotics**
-
-
-**Homework 01**
-
-
-**Student: Kevin Trejos Vargas**
-
-
-**ID: B26708**
-
-
-**Cycle: II\-2024**
-
-
-# Homework 01
-
 This exercise is based on the topic "Position and Orientation Representation."
 
 
